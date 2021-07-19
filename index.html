@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Project Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.4.1/dist/chart.min.js"></script>
+</head>
+<body>
+    <div class="dashboard"><!-- Dashboard -->
+        <section class="navigation"><!-- navigation -->
+            <img src="Assets/logo.png" alt="protologo" class="logo">
+            <div>
+                <i class="material-icons">dashboard</i>
+                <i class="material-icons">trending_up</i>
+                <i class="material-icons">group_add</i>
+                <i class="material-icons">event</i>
+                <i class="material-icons">settings</i>
+            </div>
+            <img src="Assets/contributors/p3.png" class="user image" alt="">
+        </section><!-- navigation end -->
+
+
+        <section class="main"><!-- main -->
+            <div class="search"><!-- search-->
+                <form action="">
+                    <input type="text" name="search" id="search" placeholder="Search Here">
+                    <i class="material-icons">search</i>
+                </form>
+                <div class="notification">
+                    <i class="material-icons">add_alert</i>
+                    <i class="material-icons">create</i>
+                </div>
+            </div><!-- search end-->
+
+
+            <div class="title">
+                <h1>My Project</h1>
+                <form action="#">
+                    <label for="projects">Sort By</label>
+                    <select name="projects" id="projects">
+                        <option value="recent">Recent projects</option>
+                        <option value="Finished ">Finished Projects</option>
+                        <option value="Ongoing">Ongoing Projects</option>
+                        <option value="Stalled ">Stalled Projects</option>
+                    </select>
+                </form>
+            </div>
+
+
+           <div class="project-list"><!-- project-list -->
+               <div class="project"><!-- project1 -->
+                   <div class="category category_color1"></div>
+                       <h2>Graphic Design</h2>
+                       <p>Active recently</p>
+                       <ul class="activity">
+                           <li> Comming soon banner</li>
+                           <li>Book cover</li>
+                       </ul>
+                   
+                   <div class="meta">
+                       <div class="contributors">
+                           <img src="Assets/contributors/p1.png" class="stack" alt="">
+                           <img src="Assets/contributors/p2.png" class="stack" alt="">
+                           <img src="Assets/contributors/p3.png" class="stack" alt="">
+                       </div>
+                       <i class="material-icons">more_vert</i>
+                   </div>
+
+               </div><!-- project end-->
+               <div class="project"><!-- project2 -->
+                    <div class="category "></div>
+                        <h2>Magazinw</h2>
+                        <p>1 hour ago</p>
+                        <ul class="activity">
+                            <li> Editorial page content</li>  
+                        </ul>
+                    <div class="meta">
+                        <div class="contributors">
+                            <img src="Assets/contributors/p2.png" alt="">
+                            <img src="Assets/contributors/p3.png" class="stack" alt="">
+                        </div>
+                        <i class="material-icons">more_vert</i>
+                    </div>
+                </div><!-- project2 end-->
+            <div class="project"><!-- project3 -->
+                <div class="category category_color3"></div>
+                    <h2>Layout</h2>
+                    <p>1 day ago</p>
+
+                    <ul class="activity">
+                        <li>Fix layout on page ads</li>
+                    </ul>
+                <div class="meta">
+                    <div class="contributors">
+                        <img src="Assets/contributors/p1.png" alt="">
+                    </div>
+                    <i class="material-icons">more_vert</i>
+                </div>
+
+            </div><!-- project3 end-->
+            <div class="project"><!-- project4 -->
+                <div class="category category_color4"></div>
+                    <h2>Branding</h2>
+                    <p>3 day ago</p>
+                    <ul class="activity">
+                        <li>Brainstorming shapes</li> 
+                    </ul>
+                <div class="meta">
+                    <div class="contributors">
+                        <img src="Assets/contributors/p1.png" alt="">
+                    </div>
+                    <i class="material-icons">more_vert</i>
+                </div>
+
+            </div><!-- project4 end-->
+            <div class="project"><!-- project5 -->
+                <div class="category category_color1"></div>
+                    <h2>Guidline</h2>
+                    <p>5 day ago</p>
+                    <ul class="activity">
+                        <li> brand guidelines for marked cosmetic</li>
+                    </ul>
+                <div class="meta">
+                    <div class="contributors">
+                        <img src="Assets/contributors/p1.png" alt="">
+                        <img src="Assets/contributors/p1.png" class="stack" alt="">
+                    </div>
+                    <i class="material-icons">more_vert</i>
+                </div>
+
+            </div><!-- project5 end-->
+            <div class="project"><!-- project6 -->
+                <div class="category"></div>
+                    <h2>Photoshop</h2>
+                    <p>1 week ago</p>
+                    <ul class="activity">
+                        <li>Get the photo ready for magazine</li> 
+                    </ul>
+                <div class="meta">
+                    <div class="contributors">
+                        <img src="Assets/contributors/p1.png" alt="">
+                        <img src="Assets/contributors/p1.png" class="stack"  alt="">
+                        <img src="Assets/contributors/p1.png" class="stack" alt="">
+                    </div>
+                    <i class="material-icons">more_vert</i>
+                </div>
+            </div><!-- project6 end-->
+           </div><!-- project-list end-->
+
+        </section><!-- main end -->
+        <section class="secondary"><!-- secondary -->
+            <div class="chart">
+                <h2>Total project</h2>
+                <canvas id="myChart" width="400" height="400">  
+                </canvas>
+                <div class="complete">
+                    <h3>3 Completed</h3>
+                    <p>from 5 projects</p>
+                </div>
+            </div>
+            <div class="recent_project"><!-- recent project-->
+                <div class="listing">
+                    <div class="title">
+                        <div class="category category_color1"></div>
+                            <h2>Layouting</h2>
+                            <p>By Langat tito</p>
+                    </div>
+                    <i class="material-icons">more_vert</i>
+                </div>
+                <div class="listing">
+                    <div class="title">
+                        <div class="category category_color2"></div>
+                            <h2>Photoshot</h2>
+                            <p>By ismael k Langat</p>
+                    </div>
+                    <i class="material-icons">more_vert</i>
+                </div>
+                <div class="listing">
+                    <div class="title">
+                        <div class="category category_color3" ></div>
+                            <h2>Branding</h2>
+                            <p>By Langat Evans</p>
+                    </div>
+                    <i class="material-icons">more_vert</i>
+                </div>
+                <div class="listing">
+                    <div class="title">
+                        <div class="category category_color4"></div>
+                            <h2>Graphic Design</h2>
+                            <p>By Langat collins</p>
+                    </div>
+                    <i class="material-icons">more_vert</i>
+                </div>
+            </div><!-- recent project -->
+        </section><!--secondary end -->
+    </div><!-- Dashboard end-->
+    <script src="java.js"></script>
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: [
+                        'Completed',
+                        'ongoin',
+                        'stalled'
+                    ],
+                    datasets: [{
+                        label: 'My First Dataset',
+                        data: [300, 50, 100],
+                        backgroundColor: [
+                        'rgb(255, 99, 132)',
+                        'rgb(54, 162, 235)',
+                        'rgb(255, 205, 86)'
+                        ],
+                        hoverOffset: 4
+                    }]
+                
+        
+            },
+            
+        });
+        </script>
+
+</body>
+</html>
